@@ -7,12 +7,10 @@
 </head>
 <body>
     <script>
-
-class MySDK {
+    class MySDK {
     constructor() {
         // You can initialize any configuration or settings here
     }
-
     createIframe(src, width, height) {
         const iframe = document.createElement('iframe');
         iframe.src = src;
@@ -26,9 +24,7 @@ const sdk = new MySDK();
 const iframe = sdk.createIframe('https://65d86b055405aeccad61e2b0--stirring-gecko-1845ae.netlify.app/', 800, 600);
 console.log(iframe)
 // Append the iframe to the document body
-document.body.appendChild(iframe);
-
-    </script>
-    
+  document.body.appendChild(iframe);
+    </script>   
 </body>
 </html>
