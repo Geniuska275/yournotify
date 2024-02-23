@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Notify test</title>
+</head>
+<body>
+
+<iframe id="myIframe" width="400" height="300" frameborder="0"></iframe>
+
+<script>
+var iframe = document.getElementById('myIframe');
+
+iframe.onload = function() {
+    // Access the document inside the iframe
+    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+    iframeDocument.write('<h1>YOURNOTIFY Javascript text</h1>');
+    iframeDocument.write('<p>building JAVASCRIPT SDK</p>');
+};
+
+iframe.src = 'about:blank';
+</script>
+
+</body>
+</html>
