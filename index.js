@@ -1,4 +1,3 @@
-
 // server.js
 const http = require('http');
 const fs = require('fs');
@@ -21,7 +20,3 @@ server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
 
-export function LoadIframe(){
-
-    
-}

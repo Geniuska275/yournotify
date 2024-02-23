@@ -1,28 +1,34 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Notify test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOURNOTIFY</title>
 </head>
 <body>
+    <script>
 
-<iframe id="myIframe" width="400" height="300" frameborder="0"></iframe>
+class MySDK {
+    constructor() {
+        // You can initialize any configuration or settings here
+    }
 
-<script>
-var iframe = document.getElementById('myIframe');
+    createIframe(src, width, height) {
+        const iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.width = width;
+        iframe.height = height;
+        iframe.frameBorder = 0; // Remove border
+        return iframe;
+    }
+}
+const sdk = new MySDK();
+const iframe = sdk.createIframe('https://65d86b055405aeccad61e2b0--stirring-gecko-1845ae.netlify.app/', 800, 600);
+console.log(iframe)
+// Append the iframe to the document body
+document.body.appendChild(iframe);
 
-iframe.onload = function() {
-    // Access the document inside the iframe
-    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-    iframeDocument.write('<h1>YOURNOTIFY Javascript text</h1>');
-    iframeDocument.write('<p>building JAVASCRIPT SDK</p>');
-};
-
-iframe.src = 'about:blank';
-</script>
-
+    </script>
+    
 </body>
 </html>
